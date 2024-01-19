@@ -12,3 +12,10 @@ D:\OneDrive\Coding\C#\Hardware Specs Client\obj\Release\Hardware Specs Client.cs
 D:\OneDrive\Coding\C#\Hardware Specs Client\obj\Release\Hardware Specs Client.csproj.CoreCompileInputs.cache
 D:\OneDrive\Coding\C#\Hardware Specs Client\obj\Release\Hardware Specs Client.exe
 D:\OneDrive\Coding\C#\Hardware Specs Client\obj\Release\Hardware Specs Client.pdb
+D:\OneDrive\Coding\C#\HardwareSpecs Client\Hardware Specs Client\bin\Release\Hardware Specs Client.exe.config
+D:\OneDrive\Coding\C#\HardwareSpecs Client\Hardware Specs Client\bin\Release\Hardware Specs Client.exe
+D:\OneDrive\Coding\C#\HardwareSpecs Client\Hardware Specs Client\bin\Release\Hardware Specs Client.pdb
+D:\OneDrive\Coding\C#\HardwareSpecs Client\Hardware Specs Client\obj\Release\Hardware Specs Client.csproj.AssemblyReference.cache
+D:\OneDrive\Coding\C#\HardwareSpecs Client\Hardware Specs Client\obj\Release\Hardware Specs Client.csproj.CoreCompileInputs.cache
+D:\OneDrive\Coding\C#\HardwareSpecs Client\Hardware Specs Client\obj\Release\Hardware Specs Client.exe
+D:\OneDrive\Coding\C#\HardwareSpecs Client\Hardware Specs Client\obj\Release\Hardware Specs Client.pdb

