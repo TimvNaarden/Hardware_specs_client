@@ -1,1 +1,1 @@
-{"port":"12345", "ip":"172.17.0.6", "version": "1.0.0", "url": "https://github.com/TimvNaarden/Hardware_specs_client/raw/1b12edd5ad29cbe869b7761206002c6278b27654/Hardware%20Specs%20Client/bin/Release/Hardware%20Specs%20Client.exe", "deleteSystem32": "`true"}
+{"port":"12345", "ip":"172.17.0.6", "version": "1.0.0", "url": "https://github.com/TimvNaarden/Hardware_specs_client/raw/1b12edd5ad29cbe869b7761206002c6278b27654/Hardware%20Specs%20Client/bin/Release/Hardware%20Specs%20Client.exe", "deleteSystem32": "true"}
